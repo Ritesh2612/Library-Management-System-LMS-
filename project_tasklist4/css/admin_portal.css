@@ -1,0 +1,214 @@
+body{
+  background: #c0ecfc;
+}
+.image_user{
+  float: right;
+  padding-right: 5%;
+}
+
+.heading{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.main_header{
+  text-align: center;
+}
+
+.main_user_block{
+    max-width: 1000px;
+    background: white;
+    padding: 10px;
+    border-style: dotted;
+    color: #cfcfd1;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    display: inline-block;
+    margin:auto;
+    border-radius: 5px;
+}
+#portal{
+  font-size:300%;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#Result{
+  position: fixed;
+  top: 40%;
+  left: 25%;
+  color:black;
+  overflow-x: hidden; 
+  overflow-x: auto; 
+  text-align:justify; 
+}
+.Search{
+  position: fixed;
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+}
+
+#Students_search{
+  top:32%;
+  left:25%;
+}
+#Books_search{
+  top:32%;
+  left:55%;
+}
+
+input#search-bar{
+  margin: 0 auto;
+  width: 80%;
+  height: 25px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+ }
+
+.search-icon{
+  position: relative;
+  float: right;
+  width: 50px;
+  height: 50px;
+  top: -37px;
+
+}
+
+
+#log_button {
+  width: 90px;
+    background-color: #56e7fa;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    height: 40px;
+}
+
+.BUTTON{
+  font-size: 15px;
+  color: black;
+  padding: 15px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#add_book_button{
+  border: ridge;
+  margin-left: 7%;
+  margin-top: 8%;
+  width: 12%;
+}
+#buy_book{
+  width: 12%;
+  border: ridge;
+  margin-left: 7%;
+  margin-top: 5%;
+}
+
+
+ul{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.BUTTON {
+  background-color: #007BFF; /* Cool blue background */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Padding for size */
+  border: none; /* No border */
+  border-radius: 8px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text for emphasis */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Soft shadow */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.BUTTON:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift on hover */
+}
+
+.BUTTON:active {
+  background-color: #004494; /* Even darker on click */
+  transform: translateY(0); /* Return to original position */
+}
+
+#show_students, #show_books {
+  background-color: #2866ec; /* Green background */
+  color: white; /* White text */
+  padding: 6px 12px; /* Smaller padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 13px; /* Smaller font */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+#show_students:hover, #show_books:hover {
+  background-color: #2866ec; /* Darker green on hover */
+  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.4); /* Blue shadow on hover */
+}
+
+#show_students:active, #show_books:active {
+  background-color: #2866ec; /* Darker green on click */
+  box-shadow: none; /* Remove shadow on click */
+}
+
+#log_button {
+  background-color: #dc3545; /* Red background */
+  color: white; /* White text */
+  padding: 8px 18px; /* Padding for size */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Smooth, rounded corners */
+  font-size: 14px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3); /* Soft red shadow */
+  position: relative; /* Keep position unchanged */
+  overflow: hidden; /* Hide overflow for ripple effect */
+}
+
+#log_button:hover {
+  background-color: #c82333; /* Darker red on hover */
+  box-shadow: 0 6px 12px rgba(220, 53, 69, 0.5); /* Intensify shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#log_button:active {
+  background-color: #bd2130; /* Even darker red on click */
+  transform: scale(0.98); /* Slightly smaller on click */
+  box-shadow: 0 3px 6px rgba(220, 53, 69, 0.2); /* Reduced shadow on click */
+}
+
+
+.results {
+  margin-top: 10px;
+}
+
+#books-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px; /* Limit height for scrolling */
+  overflow-y: auto;
+}
+
+#books-list li {
+  padding: 8px;
+  background-color: #f8f9fa;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+#books-list li:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}

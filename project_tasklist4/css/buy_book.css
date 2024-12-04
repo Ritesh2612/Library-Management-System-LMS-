@@ -1,0 +1,330 @@
+body{
+    background: #D0CFCE;
+  }
+  .image_user{
+    float: right;
+    padding-right: 5%;
+  }
+  
+  .heading{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  .main_header{
+    text-align: center;
+  }body {
+    background: #D0CFCE;
+    font-family: Arial, sans-serif;
+  }
+  
+  main_header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .image_user svg {
+    margin-right: 20px;
+  }
+  
+  .heading h1 {
+    font-size: 3em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+  }
+  
+  #log_button {
+    width: 85px;
+    background-color: #4CAF50;
+  }
+  
+  .BUTTON {
+    font-size: 15px;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .BUTTON:hover {
+    background-color: #0056b3;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .books-section, .cart-section {
+    width: 48%;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ul li button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  ul li button:hover {
+    background-color: #218838;
+  }
+  
+  .cart-section h2 {
+    margin-top: 20px;
+  }
+  
+  #checkout {
+    margin-top: 20px;
+    background-color: #17a2b8;
+    font-size: 16px;
+  }
+  
+  #checkout:hover {
+    background-color: #138496;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .books-section, .cart-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    #log_button {
+      margin-top: 20px;
+    }
+  }
+  
+  
+  #portal{
+    font-size:300%;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+  }
+  
+  
+  #log_button {
+    width: 85px;
+    background-color: #4CAF50;
+  }
+  
+  .BUTTON{
+    font-size: 15px;
+    color: black;
+    padding: 15px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+
+
+
+  /* USER - Management */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  .contact-area {
+  width: 100%;
+  position: relative;
+}
+#retailer1{
+    float : left;
+}
+#retailer2{
+    text-align: center;
+}
+
+.contact {
+  max-width: 420px;
+  padding: 40px 20px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.contact main {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.contact main section {
+  border-radius: 5px;
+  float: left;
+  width: 100%;
+  background-color:green;
+}
+.contact main section .content {
+  float: left;
+  width: 100%;
+  padding: 20px 30px 50px 30px;
+  position: relative;
+  text-align: center;
+}
+.contact main section .content img {
+  display: inline-block;
+  width: 140px;
+  border-radius: 50%;
+}
+.contact main section .content aside {
+  float: left;
+  width: 100%;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.contact main section .content aside h1 {
+  font-weight: 100;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.contact main section .content aside p {
+  font-size: 14px;
+  letter-spacing: .5px;
+  line-height: 160%;
+}
+.contact main .title {
+  float: left;
+  width: 100%;
+  background-color: green;
+  max-height: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: all 0.55s;
+  -moz-transition: all 0.55s;
+  -o-transition: all 0.55s;
+  transition: all 0.55s;
+}
+.contact main .title.active {
+  max-height: 100px;
+  -webkit-transition: all 1.3s;
+  -moz-transition: all 1.3s;
+  -o-transition: all 1.3s;
+  transition: all 1.3s;
+}
+.contact main .title.active p {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  transition-delay: .2s;
+}
+.contact main .title p {
+  padding: 15px 30px;
+  color: #ffffff;
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+
+@media (min-width: 414px) {
+  .contact main section .content {
+    text-align: left;
+  }
+  .contact main section .content img {
+    float: left;
+    width: 30%;
+    margin-right: 10%;
+  }
+  .contact main section .content aside {
+    width: 60%;
+  }
+}
+
+
+/* Style the search bar */
+.search-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#book-search-bar {
+  padding: 10px;
+  margin-right: 10px;
+  width: 300px;
+  font-size: 16px;
+}
+
+#search-button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #45a049;
+}
+
+/* Style for the book list container */
+#book-list {
+  display: block;
+  background-color: #f9f9f9;
+  padding: 20px;
+  color: black;
+  border: 1px solid #ccc;
+}
+.book-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+/* Add spacing and make the book title bold */
+.book-item strong {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* Style for author text */
+.book-item span {
+  font-style: italic;
+  color: #555;
+}

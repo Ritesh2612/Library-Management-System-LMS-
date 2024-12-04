@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main_page.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Parkinsans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/admin_login.css">
+    <title>Admin Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/admin_login.js" type="module" defer></script> <!-- Main login and Firebase code -->
+    <script src="js/validation.js" defer></script> <!-- Separate validation JavaScript file -->
+
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body{
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }        
+
+        /* Position and style dropdown menu */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #1b0c00;
+    margin-left: 0px;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    min-width: 170px;
+}
+
+.nav-links .dropdown-menu li {
+    text-align: left;
+}
+
+.nav-links .dropdown-menu li a {
+    display: block;
+    font-size: 17px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.nav-links .dropdown-menu li a:hover {
+    color: #f0a500;
+}
+
+/* Show dropdown on hover */
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1170px;
+            margin:auto;
+        }
+        .row{
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        ul{
+            list-style: none;
+        }
+        .footer{
+            background-color: #1b0c00;
+            padding: 40px 0;
+        }
+        .footer-col{
+        width: 25%;
+        padding: 0 15px;
+        }
+        .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.2);
+            margin:0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover{
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px){
+        .footer-col{
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        }
+        @media(max-width: 574px){
+        .footer-col{
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+
+<body style="background-image: url('book.png');background-repeat: no-repeat;background-attachment:fixed;background-size: 100% 100%;margin-top: 0px;margin-right: 0px;margin-left: 0px;margin-bottom: 0px;">
+    <nav class="navbar">
+        <img src="logo/book2.png" class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="admin_login.html">Admin Login</a></li>
+                    <li><a href="usr_login.html">User Login</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="portal" style="padding-top: 120px;">ADMIN LOGIN PAGE</h1>
+    <hr>
+    
+    <div class="login-page">
+        <div class="form">
+            <hr>
+            <h3 class="titlog">Admin Authentication</h3>
+            <hr>
+            <br>
+            <form class="login-form" id="loginForm">
+                <input type="text" placeholder="username" id="username" required />
+                <span id="usernameError" class="error-message" style="display:none; color: red;">This field is required.</span>
+
+                <input type="password" placeholder="password" id="password" required />
+                <span id="passwordError" class="error-message" style="display:none; color: red;">This field is required.</span>
+
+                <button type="button" id="submit_data">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <!-- <li><a href="#">affiliate program</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">Book</a></li>
+                        <!-- <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <!-- <a href="#"><i class="fa fa-linkedin-in"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <p style="color: #bbbbbb; font-size: small;">&copy; Library Management System.</p>
+   </footer>
+  
+   <script src="js/usr_login.js"></script>
+   
+   
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#config-web-app -->
+   <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script> 
+  
+  
+</body>
+</html>

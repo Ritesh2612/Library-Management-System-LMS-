@@ -1,0 +1,35 @@
+.bg-white{
+    background-color: #1b0c00;
+}
+.bg-blue-600{
+    background-color: #1b0c00;
+    color: #fff;
+}
+
+.but {
+    background-color: #1b0c00; /* white */
+    border: solid;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px;
+  }
+  
+   .but:hover,.but:active,.but:focus {
+    background-color: #FFFFFF ;
+    border: solid;
+    border-radius: 5px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px;
+  }
